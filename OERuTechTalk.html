@@ -30,11 +30,18 @@
             .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
                 text-transform: none;
             }
-            .slides .logo a img, .slides .logo a:hover img {
+            .slides .logo a img, .slides .logo a:hover img, .slides .copyright a img {
                 border: none;
                 box-shadow: none;
                 background: transparent;
             }
+            .instructions { width: 50%; font-size: 70% !important; }
+            .instructions tr {
+                padding: 3px;
+                border-bottom: dotted #444 1px;
+                margin-top: 5px;
+            }
+            .instructions tr:last-child { border-bottom: none; }
         </style>
 	</head>
 	<body>
@@ -47,9 +54,11 @@
                     <p>OERu 16.10 Meeting, University of Highlands and Islands<br/>
                         Inverness, Scotland - 3-5 October 2016</p>
                     <div class="footer">
-                        <div class="logo" style="float: left; width: 49%"><a href="http://oeru.org"><img src="media/oeru_logo.png" alt="OERuniversitas Logo" style="width: 3.5em;" /></a>
+                        <div class="logo" style="float: left; width: 32%"><a href="http://oeru.org"><img src="media/oeru_logo.png" alt="OERuniversitas Logo" style="width: 3.5em;" /></a>
                         </div>
-                        <div class="logo" style="float: right; width: 49%"><a href="http://oerfoundation.org"><img src="media/oerf_logo.png" alt="OER Foundation Logo" style="width: 3.5em;" /></a>
+                        <div class="copyright" style="float:left; width: 33%; text-align: center"><a title="Content on this site is licensed under a Creative Commons Attribution 4.0 International License." href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+                        </div>
+                        <div class="logo" style="float: right; width: 32%"><a href="http://oerfoundation.org"><img src="media/oerf_logo.png" alt="OER Foundation Logo" style="width: 3.5em;" /></a>
                         </div>
                     </div>
                     <aside class="notes">
@@ -66,8 +75,7 @@
                     </aside>
                 </section>
                 <section>
-                    <h1>How it's meant to work</h1>
-                    <h2 class="fragment">(usually)</h2>
+                    <h1>How will it work?</h1>
                     <aside class="notes">
                     </aside>
                 </section>
@@ -131,11 +139,17 @@
                     <section>
                         <h2>Step 3: Courses offered by OERu</h2>
                         <aside class="notes">
-                            <p>Any partner can "harvest" any course at any time, creating a "snapshottable" version for their institution. At the click of a button, a Wikieductor course becomes a mobile-friendly WordPress site, either on the institution's own infrastructure or on our Course site [side-by-side screenshot of WE course -> WP course]. Of course, institutions can also choose reuse the course materials by copying and pasting them into their desired form.</p>
+                            <p>Any partner can "harvest" any course at any time, creating a "snapshottable" version for their institution.</p>
                         </aside>
                     </section>
-                    <section>
+                    <section data-background="media/CourseOutlineWE.png" data-background-position="top">
                         <aside class="notes">
+                            <p>At the click of a button, a Wikieductor course becomes a mobile-friendly WordPress site...</p>
+                        </aside>
+                    </section>
+                    <section data-background="media/CourseSnapshotProcess.png" data-background-position="top">
+                        <aside class="notes">
+                            <p>...either on the institution's own infrastructure or on our Course site [side-by-side screenshot of WE course -> WP course]. Of course, institutions can also choose reuse the course materials by copying and pasting them into their desired form.</p>
                         </aside>
                     </section>
                 </section>
@@ -146,20 +160,22 @@
                             <p>Learners can sign up for courses, either through partner institutions, or by signing up on through OERu.org. This is particularly well suited to supporting "open boundary" courses. By registering, learners will be engaged with course-related instructional emails. These communications will be delivered through our learner engagement platform, Mautic, which will allow us to determine when learners act upon these emails. [CSF email screenshot]</p>
                         </aside>
                     </section>
-                    <section>
+                    <section data-background="media/MauticCourseEmail.png" data-background-position="top">
                         <aside class="notes">
+
                         </aside>
                     </section>
                 </section>
                 <section>
                     <section>
-                        <h2>Step 5: Learners enhance learning by sharing</h2>
+                        <h2>Step 5: Learners gain perspective by sharing</h2>
                         <aside class="notes">
                             <p>Learners can share and learn with one another though WENotes directly [screenshot], and via communication pulled from a wide variety of other places - suitably tagged posts on their own blogs, other social media (Twitter, Google+), the OERu's Rocket.Chat, the OERu mailing lists, and our learner Forums.</p>
                         </aside>
                     </section>
-                    <section>
+                    <section data-background="media/WENotesFromCourseWP.png" data-background-position="top">
                         <aside class="notes">
+                            <p>This is an example of WENotes filtered for a specific Course.</p>
                         </aside>
                     </section>
                 </section>
@@ -177,12 +193,14 @@
                         <h1>Permissionless Learning</h1>
                         <h2>Ability to fail (or not) anonymously</h2>
                         <aside class="notes">
-                            <p>Throughout this process, motivated learners, anywhere in the world, can study these materials. All they need is an internet connected device [mobile screenshot of course.oeru.org].</p>
-                            <p></p>
+                            <p>Throughout this process, motivated learners, anywhere in the world, can study these materials.</p>
                         </aside>
                     </section>
                     <section>
+                        <div class="image" style="float: right; width: 40%;"><img src="media/CoursePage-WP_Mobile.png">
+                        <p>Today all a learner needs is aptitude, motivation...<span class="fragment">and an internet connected smartphone.</span></p>
                         <aside class="notes">
+                            <p>All they need is an internet connected device [mobile screenshot of course.oeru.org].</p>
                         </aside>
                     </section>
                 </section>
@@ -223,29 +241,39 @@
                             <p>We are increasingly building analytics tools like Piwik and Mautic into all of our services, so that, for example, course websites and associated email communication with students will be handled by systems that can measure the results of those communications. We want to be gathering information necessary to ensure the OERu is constantly learning, adapting, and improving.</p>
                         </aside>
                     </section>
-                    <section>
+                    <section data-background="media/MauticCampaignBuilder.png" data-background-position="top">
                         <aside class="notes">
                             <p>A Mautic campaign, showing the mapping of communication and the triggers for analytics events.</p>
-                        </aside>
-                    </section>
-                    <section>
-                        <aside class="notes">
-                            <p>Piwik Web statistics.</p>
                         </aside>
                     </section>
                 </section>
 
                 <section>
                     <h1>Acknowledgements</h1>
-                    <p>The OERu Platinum Partners</p>
+                    <p>The OERu <a href="https://oeru.org/news/senior-open-source-technologist-joins-the-oeru-family/">Platinum Partners</a></p>
                     <p>The OERu <a href="https://wikieducator.org/OERu/Planning/Technology_working_group">Technology Working Group</a></p>
+                    <p style="font-size: 80%; color: #555">This presentation is available online: <a href="https://oer.nz/16">http://oer.nz/16</a></p>
+                    <div class="footer">
+                        <div class="logo" style="float: left; width: 49%"><a href="http://oeru.org"><img src="media/oeru_logo.png" alt="OERuniversitas Logo" style="width: 3.5em;" /></a>
+                        </div>
+                        <div class="logo" style="float: right; width: 49%"><a href="http://oerfoundation.org"><img src="media/oerf_logo.png" alt="OER Foundation Logo" style="width: 3.5em;" /></a>
+                        </div>
+                    </div>
                     <aside class="notes">
                     </aside>
                 </section>
                 <section>
                     <h1>Credits</h1>
-                    <p>The OERu Platinum Partners</p>
-                    <p>The OERu <a href="https://wikieducator.org/OERu/Planning/Technology_working_group">Technology Working Group</a></p>
+                    <p>Attribution for <a href="https://commons.wikimedia.org/wiki/File:Human-edit-undo.svg#globalusage">Arrow graphic</a> on the Snapshot page.</p>
+                    <p>This presentation was delivered with <a href="http://lab.hakim.se/reveal-js/">Reveal.JS</a> an open source presentation framework. Developers can <a href="https://github.com/hakimel/reveal.js">get the code</a> and others can use its point-and-click builder, <a href="https://slides.com">Slides.com</a>.</p>
+                    <table class="instructions">
+                        <tbody>
+                            <tr><td class="left">Full Screen</td><td class="right">F</td></tr>
+                            <tr><td class="left">Next Slide</td><td class="right">Space</td></tr>
+                            <tr><td class="left">Speaker Notes</td><td class="right">S</td></tr>
+                            <tr><td class="left">Thumbnail View</td><td class="right">Esc</td></tr>
+                        </tbody>
+                    </table>
                     <aside class="notes">
                     </aside>
                 </section>
@@ -260,7 +288,7 @@
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
-                transition: 'convex',
+                //transition: 'convex',
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
